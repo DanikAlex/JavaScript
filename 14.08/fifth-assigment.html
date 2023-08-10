@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var indexArray = [0,0,0,0,0,0,0,0,0,0];
+        var userNumber=prompt("please enter a number");
+        for (var index=0;index<=userNumber.length;index++) {
+            indexArray[userNumber[index]]++;
+        }
+
+        for (var index=0;index<indexArray.length;index++) {
+            console.log(index," : ",indexArray[index]);
+        }
+
+    </script>
+</head>
+<body>
+    <h1>number count</h1><hr>
+</body>
+</html>
