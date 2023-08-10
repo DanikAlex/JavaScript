@@ -6,11 +6,19 @@
     <title>Document</title>
     <script>
 
-        var name=prompt("please enter your name");
-        alert("hello "+name);
+        // var name=prompt("please enter your name");
+        // alert("hello "+name);
 
+        var userEmail=prompt("please enter your email");
+        console.log(userEmail);
+        console.log(userEmail.indexOf("@"));
+        if (userEmail.indexOf("@")>=0){
+            console.log("email is okay")
+        } else {
+            console.log("email in not okay")
+        }
 
-    </script>
+</script>
 </head>
 <body>
     
