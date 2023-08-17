@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var userNumber=prompt("enter a number");
+        var temp=userNumber;
+        var sum=0;
+        var avg=0;
+        var totalNumber=0;
+        while(temp>0){
+            totalNumber++;
+            sum+=temp%10;
+            temp=parseInt(temp/10);
+        }
+        avg=(sum/totalNumber);
+        console.log("The sum is: ",sum," the average is:",avg," the amount of digits is:",totalNumber);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

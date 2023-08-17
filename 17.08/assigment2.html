@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var password=prompt("enter password");
+        var step=1;
+        while(password!="12345" && step<5){
+            password=prompt("wrong password, try again");
+            step++
+        }
+        if (step>4){
+            alert("you tried too many times");
+        } else {
+            alert("login successful");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
