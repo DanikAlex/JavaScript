@@ -12,12 +12,7 @@
             password=prompt("wrong password, try again");
             step++
         }
-        if (step>4){
-            alert("you tried too many times");
-        } else {
-            alert("login successful");
-        }
-
+        alert(step>4?"you tried too many time":"login successful")
     </script>
 </head>
 <body>
