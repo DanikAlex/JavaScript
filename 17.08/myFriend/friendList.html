@@ -8,14 +8,30 @@
         *{
             text-align: center;
         }
+        .imgForm{
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 2px black;
+            width: 50%;
+            margin:auto;
+        }
+
     </style>
     <script src="js/friend.js"></script>
 </head>
 <body>
     <h1>Friend list</h1><hr>
-    <input type="url" id="imageUrl" placeholder="enter image url">
-    <input type="button" value="load image" onclick="loadImage()">
-    <br><br>
-    <img src="/17.08/myFriend/assets/images/anonymous.png" id="friendImage" width="200"> 
+    <div class="imgForm">
+        <input type="url" id="imageUrl" placeholder="enter image url"><br>
+        <input type="text" id="friendName" placeholder="enter friend name"><br>
+        <input type="tel" id="friendTel" placeholder="enter friend name"> <br>
+        <input type="button" value="load image" onclick="loadImage()">
+        <br><br>
+
+    </div>  
+    <!-- <img src="/17.08/myFriend/assets/images/anonymous.png" id="friendImage" width="200">  -->
+    <table>
+        <tbody id="friendList"></tbody>
+    </table>    
 </body>
 </html>
