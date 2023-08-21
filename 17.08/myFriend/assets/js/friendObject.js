@@ -41,11 +41,13 @@ function createTable(){
 function clearTable(){
     document.getElementById("data").innerHTML="";
     friendList = [];
+    saveData();
 }
 
 function removeLast(){
     friendList.pop();
     createTable();
+    saveData();
 }
 
 function loadData(){
