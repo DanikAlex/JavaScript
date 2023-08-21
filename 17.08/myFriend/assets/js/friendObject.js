@@ -1,21 +1,20 @@
-var imageUrl = [];
-var friendTel = [];
-var friendName = [];
+var friendList=[];
 
 function loadImage(){
     var urlData = document.getElementById("imageUrl").value;      //input
     var telData = document.getElementById("friendTel").value;    //input
     var nameData = document.getElementById("friendName").value;  //input
 
-    imageUrl.push(urlData);     //add data to array
-    friendTel.push(telData);    //add telephone to array
-    friendName.push(nameData);  //add name to array
+    var data = new Object();
+    data.urlData = urlData;
+    data.telData = telData;
+    data.nameData = nameData;
+
+    friendList.push(data);
 
     createTable();
 
     document.getElementById("friendForm").reset();  
- 
-
 }
 
 function createTable(){
@@ -25,12 +24,12 @@ function createTable(){
 
     var info= "";
 
-    for (var index=0;index<imageUrl.length;index++){
+    for (var index=0;index<friendList.length;index++){
         info += `
         <tr>
-            <td><img src="${imageUrl[index]}"></td>
-            <td>${friendName[index]}</td>
-            <td>${friendTel[index]}</td>
+            <td><img src="${friendList[index].urlData}"></td>
+            <td>${friendList[index].nameData}</td>
+            <td>${friendList[index].telData}</td>
         </tr>
         `;
     }
@@ -40,14 +39,10 @@ function createTable(){
 
 function clearTable(){
     document.getElementById("data").innerHTML="";
-    imageUrl = [];
-    friendTel = [];
-    friendName = [];
+    friendList = [];
 }
 
 function removeLast(){
-    imageUrl.pop();
-    friendTel.pop();
-    friendName.pop();
+    friendList.pop();
     createTable();
 }
