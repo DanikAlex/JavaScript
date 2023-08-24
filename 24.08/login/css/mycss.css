@@ -1,0 +1,16 @@
+*{
+    text-align: center;
+}
+
+.loginForm{
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px black;
+    width: 50%;
+    margin:auto;
+    padding: 20px;
+}
+
+input{
+    margin-bottom: 20px;
+}
