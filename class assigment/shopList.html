@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop List</title>
+    <script defer src="/class assigment/assets/js/shopList.js"></script>
+    <link rel="stylesheet" href="/class assigment/assets/styles/style.css">
+</head>
+<body>
+    <h1>Shopping list</h1><hr>
+    <br><br>
+    <div id="shopList">
+        <input type="url" id="imageURL" placeholder="enter a photo URL"><br>
+        <input type="text" id="shopItem" placeholder="enter item name"><br>
+        <input type="number" id="itemAmount" placeholder="enter amount of items"><br>
+        <input type="button" value="add item" onclick="addItem()">
+    </div>    
+
+    <input type="button" value="clear" onclick="clearTable()">
+    <input type="button" value="remove last" onclick="removeLast()">
+
+    <table id="shopTable">
+        <tbody id="data"></tbody>
+    </table>
+</body>
+</html>
