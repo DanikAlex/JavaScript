@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage error</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+    <script>
+        var myData = [];
+        
+        const saveData=()=>{
+            var userData = document.getElementById("userData").value;
+            var newData = loadData();
+            newData.push(userData);
+            localStorage.setItem("data",JSON.stringify(newData));
+        }
+
+        const loadData = () =>{
+            myData = JSON.parse(localStorage.getItem("data")) || [];
+            return myData;                                            //logical or
+        }
+
+        // const loadData = () =>{
+        //     myData = JSON.parse(localStorage.getItem("data"));
+        //     //console.log("myData:",typeof localStorage.getItem("data"));
+        //     if (!myData){
+        //         myData = [];
+        //     }
+        //     return myData;
+        // }
+
+        loadData(); 
+    </script>
+</head>
+<body>
+    <h1>we have a problem</h1><hr>
+    <input type="text" id="userData" placeholder="something">
+    <input type="button" value="save data" onclick="saveData()">
+    <hr>
+    <div id="lsData"></div>
+</body>
+</html>
