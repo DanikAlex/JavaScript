@@ -1,5 +1,5 @@
 var myList = ["milk", "eggs", "bread", "salt", "paper", "chocolate", "cheese", "apple"];
-var name = ["בשרי", "חלבי"];
+
 //method 1
 // var myListHTML = document.getElementById("myList");
 // myListHTML.innerHTML = `
