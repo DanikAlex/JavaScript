@@ -33,7 +33,7 @@ var myList = ["milk", "eggs", "bread", "salt", "paper", "chocolate", "cheese", "
 // };
 
 //method 4
-// var documnetLoaded = ()=>{
+// var documentLoaded = ()=>{
 //     makeList();
 // }
 
@@ -59,7 +59,7 @@ var makeList = () =>{
     for (var counter=0;counter<myList.length;counter++){
         menu.appendChild(makeItem(myList[counter]));
     }   
-    menu.appendChild(makeHR("daniel"));
+    menu.appendChild(makeHR(menu.firstChild.textContent));
 }
 
 var makeItem = (menuItem) =>{
@@ -75,7 +75,7 @@ var makeHR = (userName) =>{
     myName.textContent = userName;
     myDiv.appendChild(myHR);
     myDiv.appendChild(myName);
-    myDiv.appendChild(myHR);
+    //myDiv.appendChild(myHR);
     return myDiv;
 }
 
