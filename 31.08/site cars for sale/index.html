@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cars</title>
+    <link rel="stylesheet" href="assets/style/mycss.css">
+    <script src="assets/js/myJs.js"></script>
+</head>
+<body>
+    <h1>רכבים למכירה</h1><hr>
+    <div id="input">
+        <input type="text" placeholder="יצרן רכב" id="carManu"><br>
+        <input type="text" placeholder="דגם רכב" id="carModel"><br>
+        <input type="number" placeholder="שנת ייצור" id="year"><br>
+        <input type="url" placeholder="קישור לתמונה" id="imageURL"><br>
+        <select id="previous">
+            <option selected>בחרו באפשרות הנכונה</option>
+            <option id="prati">פרטי</option>
+            <option id="company">חברה</option>
+            <option id="taxi">מונית</option>
+            <option id="teacher">מורה נהיגה</option>
+            <option id="disabled">נכים</option>
+        </select><br>
+        <select id="sunRoof">
+            <option selected>בחרו באפשרות הנכונה</option>
+            <option id="doesHave">יש סאנרוף</option>
+            <option id="doesntHave">אין סאנרוף</option>
+        </select><br>
+        <input type="number" placeholder="מחיר חודשי" id="price"><br>
+        <input type="button" value="שמור" onclick="addItem()"><br><br><br>
+    </div>
+    <div id="table">
+        <table id="shopTable">
+            <thead>
+                <tr>
+                    <th>יצרן</th>
+                    <th>דגם</th>
+                    <th>שנת ייצור</th>
+                    <th>בעלות קודמת</th>
+                    <th>סאנרוף</th>
+                    <th>מחיר חודשי</th>
+                    <th>תמונות</th>
+                    <th>הסרת פריט</th>
+                </tr>
+            </thead>
+            <tbody id="data"></tbody>
+        </table>
+    </div>
+</body>
+</html>
