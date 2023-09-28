@@ -1,7 +1,11 @@
 const displayLocation = () => {
-    getUserLocation(location => console.log(`${location.latitude}, ${location.longitude}`));
+    getUserLocation(location => console.log(`${location.latitude}, ${location.longitude}`), error => console.log(`error is ${error}`));
 }
 
-const getUserLocation = (callback) => {
-    navigator.geolocation.getCurrentPosition(position => callback(position.coords));
+const getUserLocation = (successCallback, errorCallback) => {
+    try {
+        navigator.geolocation.getCurrentPosition(position => successCallback(position.coords));
+    } catch (err) {
+        errorCallback(err);
+    }    
 }
