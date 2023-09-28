@@ -23,7 +23,6 @@ function doSomething () {
     nice2(function (color){
         document.body.style.background = color;
     })
-
 }
 
 function func1 (callback){

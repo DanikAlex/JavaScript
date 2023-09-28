@@ -1,37 +1,21 @@
 function doSomething() {
-  func1(function () {
-    alert("hi");
-  });
-  func2(function () {
+  func1(() => alert("hi"));
+  func2(() => {
     alert("hi");
     return "hello";
   });
-  func3(function (x) {
-    alert(x);
-  });
-  func4(function (x, y) {
-    alert(x + y);
-  });
-  func5(function (x, y, z) {
-    alert(x * y * z);
-  });
-  func6(function () {
-    return 42;
-  });
-  func7(function (a, b) {
-    return a + b;
-  });
-  func8(function (a, b) {
-    return a > b ? a : b;
-  });
-  func9(function (x, y, z) {
+  func3(x => alert(x));
+  func4((x, y) => alert(x + y));
+  func5((x, y, z) => alert(x * y * z));
+  func6(() => 42);
+  func7((a, b) => a + b);
+  func8((a, b) =>a > b ? a : b);
+  func9((x, y, z) => {
     alert(x);
     alert(y);
     alert(z);
   });
-  func10(function () {
-    return { name: "betty", age: 1.5, color: "gray" };
-  });
+  func10(() => ({name: "betty", age: 1.5, color: "gray"}));
 }
 
 function func1(callback) {
@@ -79,11 +63,11 @@ function func10(callback, name, age, color) {
 */
 
 function doSomething2 () {
-    func11(function () { alert("hello"); });
-    func12(function (x ,y) {alert(x + y);});
-    func13(function (x ,y) { return x > y ? x : y });
-    func14(function () { return { name: "zurochi", price: "20" }; });
-    func15(function () {return 30}, function () {return 20});
+    func11(() => alert("hello"));
+    func12((x ,y) => alert(x + y));
+    func13((x ,y) => x > y ? x : y);
+    func14(() => { return { name: "zurochi", price: "20" }; });
+    func15(() => 30, () => 20);
 }
 
 function func11 (callback) {
