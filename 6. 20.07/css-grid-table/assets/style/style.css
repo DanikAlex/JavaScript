@@ -1,0 +1,9 @@
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr repeat(3, 3fr);
+}
+
+div {
+    border: 1px solid black;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam 1</title>
+    <script src="/js/myjs.js"></script>
+    <link href="/css/mycss.css" rel="stylesheet"> 
+</head>
+<body>
+    <h1>Add product</h1><hr><br>
+    <div id="form">
+        <form id="groceryList">
+            <input type="text" placeholder="Product name" id="productName">
+            <input type="number" placeholder="Price" id="price">
+            <select id="category">
+                <option selected>Category</option>
+                <option id="drinks">Drinks</option>
+                <option id="meat">Meat</option>
+                <option id="dairy">Dairy</option>
+                <option id="snacks">Snacks</option>
+                <option id="basic">Basic</option>
+            </select>
+            <input type="url" placeholder="Image URL" id="imageURL">
+            <input type="button" value="Add product" onclick="addItem()">
+        </form><br><br>
+    </div><br><br>
+    <h2>My Cart</h2>
+    <div id="table">
+        <table id="productList">
+            <thead>
+                <tr>
+                    <th>Product name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+body {
+  background-image: url("../images/corkboard.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url("../fonts/Lobster-Regular.ttf");
+}
+
+h1 {
+  text-align: center;
+  font-family: myFont;
+}
+
+.newTask {
+  background-image: url("../images/formbg.jpg");
+  background-size: 1000px;
+  height: 300px;
+  margin: 25px 300px;
+  text-align: center;
+}
+
+#formText {
+  margin: 15px 0px 0px 0px;
+  height: 150px;
+  padding: 12px 20px;
+  resize: none;
+}
+
+#table {
+  padding: 25px 150px;
+}
+
+div.note {
+  background-image: url("../images/notebg.png");
+  position: relative;
+  height: 250px;
+  width: 200px;
+  margin: 10px;
+  flex: 0 0 calc(33.3% - 20%);
+  box-sizing: border-box;
+}
+
+.fadeIn {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#noteText {
+  margin-top: 40px;
+  margin-right: 60px;
+  height: 150px;
+  width: 160px;
+  border: none;
+  resize: none;
+}
+
+.noteDate,
+.noteTime {
+  margin-left: 10px;
+}
+
+textarea {
+  background-color: inherit;
+}
+
+div.note button.delete-btn {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+div.note:hover button.delete-btn {
+  display: block;
+}

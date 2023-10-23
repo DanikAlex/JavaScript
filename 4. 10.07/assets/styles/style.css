@@ -1,0 +1,20 @@
+p {
+    color:yellow;
+     background-color: lime;
+}
+
+.biggish {
+    font-size:x-large;
+}
+ 
+#third-paragraph {
+    font-style: italic;
+}
+
+p:hover {
+    border: 2px red
+}
+
+p::selection {
+    text-decoration: underline;
+}
