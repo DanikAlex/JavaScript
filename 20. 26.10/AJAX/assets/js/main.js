@@ -49,7 +49,7 @@
                 <td>${todo.title}</td>
                 <td><input type="checkbox" ${todo.completed ? 'checked' : ''}></td>
             </tr>
-        `).reduce((acumulator, tr) => acumulator + tr, '')
+        `).reduce((accumulator, tr) => accumulator + tr, '')
 
         const todoTable = document.getElementById('todoTable');
         todoTable.innerHTML = reduced;
@@ -65,7 +65,7 @@
         //                 <td>${user.email}</td>
         //                 <td>${user.address.city}</td>
         //             </tr>
-        //         `).reduce((acumulator, tr) => acumulator + tr, '')
+        //         `).reduce((accumulator, tr) => accumulator + tr, '')
 
         //         const usersTableBody = document.getElementById('usersTableBody');
         //         usersTableBody.innerHTML = reduced;
