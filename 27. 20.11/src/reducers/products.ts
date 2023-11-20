@@ -1,3 +1,4 @@
+import product from "../interfaces/product.js";
 import Product from "../interfaces/product.js";
 
 export default function reduceProducts(products: Product[]): string {
@@ -18,4 +19,8 @@ export default function reduceProducts(products: Product[]): string {
 
 export function reduceTotalPrice(products: Product[]): number {
     return products.reduce((acc, curr) => acc + curr.price, 0);
+}
+
+export function reduceAverageRating(products: Product[]): number {
+    return products.reduce((acc, curr) => acc + curr.rating, 0) / products.length;
 }

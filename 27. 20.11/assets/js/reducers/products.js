@@ -16,3 +16,6 @@ export default function reduceProducts(products) {
 export function reduceTotalPrice(products) {
     return products.reduce((acc, curr) => acc + curr.price, 0);
 }
+export function reduceAverageRating(products) {
+    return products.reduce((acc, curr) => acc + curr.rating, 0) / products.length;
+}

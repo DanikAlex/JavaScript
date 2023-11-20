@@ -8,14 +8,16 @@ be able to create a new product
 
 */
 
+import productsFormListener from "./event-listeners/product-form-listener.js";
 import productsListener from "./event-listeners/products-table.js";
 import Product from "./interfaces/product.js";
-import reduceProducts, { reduceTotalPrice } from "./reducers/products.js";
-import { presentNumberOfProducts, presentProductsTable, presentTotalPrice } from "./ui/product.js";
+import reduceProducts, { reduceTotalPrice, reduceAverageRating } from "./reducers/products.js";
+import { presentNumberOfProducts, presentProductsTable, presentTotalPrice, presentAverageRating } from "./ui/product.js";
 
 (async () => {
     // initialization
-    document.getElementById('products-table-body').addEventListener('click', productsListener)
+    document.getElementById('products-table-body').addEventListener('click', productsListener);
+    document.getElementById('add-product-form').addEventListener('submit', productsFormListener);
 
     // get data
     const response = await fetch('https://dummyjson.com/products');
@@ -30,10 +32,12 @@ import { presentNumberOfProducts, presentProductsTable, presentTotalPrice } from
     const productsHtml = reduceProducts(products);
     const numberOfRows = products.length;
     const totalPrice = reduceTotalPrice(products);
+    const totalRating = reduceAverageRating(products);
 
     // present data (UI)
     presentProductsTable(productsHtml);
     presentNumberOfProducts(numberOfRows);
     presentTotalPrice(totalPrice);
+    presentAverageRating(totalRating);
 
 })();

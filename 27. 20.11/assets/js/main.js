@@ -16,12 +16,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import productsFormListener from "./event-listeners/product-form-listener.js";
 import productsListener from "./event-listeners/products-table.js";
-import reduceProducts, { reduceTotalPrice } from "./reducers/products.js";
-import { presentNumberOfProducts, presentProductsTable, presentTotalPrice } from "./ui/product.js";
+import reduceProducts, { reduceTotalPrice, reduceAverageRating } from "./reducers/products.js";
+import { presentNumberOfProducts, presentProductsTable, presentTotalPrice, presentAverageRating } from "./ui/product.js";
 (() => __awaiter(void 0, void 0, void 0, function* () {
     // initialization
     document.getElementById('products-table-body').addEventListener('click', productsListener);
+    document.getElementById('add-product-form').addEventListener('submit', productsFormListener);
     // get data
     const response = yield fetch('https://dummyjson.com/products');
     const json = yield response.json();
@@ -30,8 +32,10 @@ import { presentNumberOfProducts, presentProductsTable, presentTotalPrice } from
     const productsHtml = reduceProducts(products);
     const numberOfRows = products.length;
     const totalPrice = reduceTotalPrice(products);
+    const totalRating = reduceAverageRating(products);
     // present data (UI)
     presentProductsTable(productsHtml);
     presentNumberOfProducts(numberOfRows);
     presentTotalPrice(totalPrice);
+    presentAverageRating(totalRating);
 }))();

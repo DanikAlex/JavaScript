@@ -10,11 +10,20 @@
 </head>
 
 <body>
+    <form id="add-product-form">
+        <input id="title" placeholder="title" type="text"><br>
+        <input id="description" placeholder="description" type="text"><br>
+        <input id="price" placeholder="price" type="number"><br>
+        <input id="rating" min="0" max="5" placeholder="rating" type="number"><br>
+        <input type="submit" id="submit" value="submit"><br>    
+    </form>
     <div id="aggregation-container">
         <span class="aggregation-label"># of rows</span>
         <span id="number-of-rows" class="aggregation-data"></span>
         <span class="aggregation-label">total $</span>
         <span id="total-price" class="aggregation-data"></span>
+        <span class="aggregation-label">average rating</span>
+        <span id="total-rating" class="aggregation-data"></span>
     </div>
     <div>
         <table>
