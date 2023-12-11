@@ -1,0 +1,12 @@
+.Employees>table,
+.Employees th,
+.Employees td {
+    margin: auto;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.Employees img {
+    width: 50px;
+    vertical-align: middle;
+}
