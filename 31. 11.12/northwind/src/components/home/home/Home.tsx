@@ -2,9 +2,12 @@ import "./Home.css";
 import ProductsImageSource from '../../../assets/images/products.jpg';
 import Products2ImageSource from '../../../assets/images/products2.jpg';
 import { useEffect, useState } from "react";
+import useTitle from "../../../utils/useTitle";
 
 function Home(): JSX.Element {
 
+    useTitle("Home");
+    
     const randomNumber = Math.floor(Math.random() * 2) + 1;
 
     const desserts = [

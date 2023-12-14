@@ -1,9 +1,12 @@
 import Product from "../../../models/Product";
 import productsService from "../../../services/Products";
+import useTitle from "../../../utils/useTitle";
 import "./Products.css";
 import { useEffect, useState } from "react";
 
 function Products(): JSX.Element {
+
+    useTitle("Product");
 
     const [products, setProducts] = useState<Product[]>([]);
 

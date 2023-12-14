@@ -1,5 +1,5 @@
 import About from "../../about/about/About";
-import Employees from "../../employees/employees/Employees";
+import Employees from "../../employees/Employees/Employees";
 import Home from "../../home/home/Home";
 import Products from "../../products/products/Products";
 import Page404 from "../page404/Page404";
