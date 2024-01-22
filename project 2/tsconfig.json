@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "ES2022",
+        "outDir": "assets/js",
+        "noEmitOnError": true,
+    }
+}

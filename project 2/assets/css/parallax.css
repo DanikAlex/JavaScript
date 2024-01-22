@@ -1,0 +1,95 @@
+.parallax-container {
+    height: 400px;
+    overflow: hidden;
+    perspective: 1px;
+    perspective-origin: 0 0;
+  }
+  
+  .parallax-layer {
+    position: absolute;
+    top: 150px;
+    right: -1000px;
+    bottom: -430px;
+    left: 900px;
+    transform-origin: 0 0;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax-background {
+    background: url("/assets/img/All\ coins.png") center / cover no-repeat;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(-1px) scale(2);
+  }
+  
+  
+  /* Responsive styles */
+  @media only screen and (max-width: 850px) {
+    .parallax-container {
+      height: 200px; /* Adjust the height for smaller screens */
+    }
+  
+    .parallax-layer {
+      top: 75px; /* Adjust the positioning for smaller screens */
+      right: -500px;
+      bottom: -215px;
+      left: 450px;
+    }
+  
+    .parallax-background {
+      transform: translateZ(-1px) scale(1.5); /* Adjust the scale for smaller screens */
+    }
+  }
+  
+  /* Medium Large Screens (1650px) */
+  @media only screen and (max-width: 1650px) {
+    .parallax-container {
+      height: 350px; /* Adjust height */
+    }
+    .parallax-layer {
+      /* Adjust positioning and dimensions */
+      top: 130px;
+      right: -800px;
+      bottom: -360px;
+      left: 750px;
+    }
+    .parallax-background {
+      transform: translateZ(-1px) scale(1.8); /* Adjust scale */
+    }
+  }
+  
+  /* Large Screens (1200px) */
+  @media only screen and (max-width: 1200px) {
+    .parallax-container {
+      height: 300px; /* Adjust height */
+    }
+    .parallax-layer {
+      /* Adjust positioning and dimensions */
+      top: 100px;
+      right: -600px;
+      bottom: -300px;
+      left: 600px;
+    }
+    .parallax-background {
+      transform: translateZ(-1px) scale(1.6); /* Adjust scale */
+    }
+  }
+  
+  
+  /* Extra Small Screens (500px) */
+  @media only screen and (max-width: 500px) {
+    .parallax-container {
+      height: 150px; /* Adjust height */
+    }
+    .parallax-layer {
+      /* Adjust positioning and dimensions */
+      top: 50px;
+      right: -250px;
+      bottom: -150px;
+      left: 250px;
+    }
+    .parallax-background {
+      transform: translateZ(-1px) scale(1.2); /* Adjust scale */
+    }
+  }
+  

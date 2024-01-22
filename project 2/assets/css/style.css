@@ -1,0 +1,96 @@
+.card>img {
+    width: 32px;
+}
+
+.coinSearchInput{
+   justify-content: left;
+}
+
+.text-center {
+    background-image: url('/assets/images/crypto.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+body{
+    background-image: radial-gradient(grey, white);
+}
+
+.card-size{
+    padding: 30px;
+}
+
+.navbar{
+    background-color: grey;
+}
+
+.popup-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .popup-box .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+  }
+  
+  .popup-box .popup-content {
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  
+  .popup-content .popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    border-bottom: 1px solid #a9a9a9;
+  }
+  
+  .popup-content .popup-header button {
+    color: #a9a9a9;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .popup-header img {
+    margin: auto;
+    display: block;
+  }
+  
+  .popup-content .popup-info {
+    margin: 1rem;
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .popup-box,
+  .popup-box .popup {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+  }
+  
+  .popup-box.show,
+  .popup-box.show .popup {
+    opacity: 1;
+    pointer-events: auto;
+  }
