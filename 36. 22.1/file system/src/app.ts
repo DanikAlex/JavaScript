@@ -41,6 +41,7 @@ const readFilePromise = promisify(fs.readFile);
   }
 })();
 
+// fsPromises
 (async () => {
     try {
       await fsPromises.writeFile("./data4.txt", "hello from fsPromises");
@@ -50,3 +51,28 @@ const readFilePromise = promisify(fs.readFile);
       console.error(err);
     }
   })(); 
+
+  (async () => {
+    try {
+      fsPromises.mkdir('./storage');
+    } catch (err) {
+
+    }
+
+    let data = '';
+    for (let i = 1; i < 1000; i++){
+      if (i % 7 === 0){
+        data += `${i},`;
+      }
+    }
+
+    await fsPromises.writeFile('./storage/numbers', data);
+
+    let numbersStr = await fsPromises.readFile('./storage/numbers', 'utf-8');
+
+    let numbers = numbersStr.split(',').map(Number);
+
+    console.log(numbers.length);
+
+    console.log(numbers.slice(0, 10));
+  })();
